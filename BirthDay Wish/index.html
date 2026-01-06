@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Happy Birthday My Love</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(120deg, #ff9a9e, #fad0c4);
+            font-family: 'Segoe UI', sans-serif;
+            text-align: center;
+            color: white;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        h1 {
+            font-size: 3.5em;
+            margin-top: 60px;
+            animation: glow 2s infinite alternate;
+        }
+
+        p {
+            font-size: 1.3em;
+            width: 70%;
+            margin: auto;
+            margin-top: 20px;
+            line-height: 1.6;
+        }
+
+        button {
+            margin-top: 40px;
+            padding: 15px 30px;
+            font-size: 18px;
+            border: none;
+            border-radius: 30px;
+            background: white;
+            color: #ff4d6d;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #ff4d6d;
+            color: white;
+        }
+
+        .surprise {
+            display: none;
+            font-size: 2em;
+            margin-top: 30px;
+            animation: fadeIn 2s;
+        }
+
+        @keyframes glow {
+            from { text-shadow: 0 0 10px #fff; }
+            to { text-shadow: 0 0 25px #ffeb3b; }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .heart {
+            position: absolute;
+            color: red;
+            font-size: 24px;
+            animation: float 6s linear infinite;
+        }
+
+        @keyframes float {
+            0% { bottom: -50px; opacity: 1; }
+            100% { bottom: 110%; opacity: 0; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Happy Birthday My Love ❤️</h1>
+
+    <p>
+        "Happy Birthday Zaheer! 🎉🥳💖 Today is all about you, full of smiles 😄, and fun 🎈.
+         You are the most special part of my life ❤️✨ 
+         Every day your smile gives me energy ☀️💫
+          May Allah always keep you happy 🌸🌟 and may your life be full of love 💕, success 🏆, and surprises 🎁. 
+          You are my favorite person 😍💖 I love teasing you 😏 and it feels so good when you agree 😄💖 Today and always, may your life be magical and sparkling ✨✨ Enjoy your day, dance 💃, and shine the world with your amazing vibes 😎🌈💖"
+        Today is very special because the most beautiful soul came into this world.
+        You are my happiness, my peace, and my forever.
+        May Allah bless you with a long life, success, and endless smiles.
+    </p>
+
+    <button onclick="showSurprise()">Click for Surprise 🎁</button>
+
+    <div class="surprise" id="surprise">
+        I Love You Forever 💖🎂
+        <a href="gallery.html">
+    <button>See Our Memories 📸</button>
+</a>
+    </div>
+
+    <script>
+        function showSurprise() {
+            document.getElementById("surprise").style.display = "block";
+        }
+
+        // Floating hearts
+        setInterval(() => {
+            const heart = document.createElement("div");
+            heart.classList.add("heart");
+            heart.innerHTML = "❤️";
+            heart.style.left = Math.random() * 100 + "vw";
+            document.body.appendChild(heart);
+
+            setTimeout(() => {
+                heart.remove();
+            }, 6000);
+        }, 400);
+    </script>
+
+</body>
+</html>

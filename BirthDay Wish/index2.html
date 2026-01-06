@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Happy Birthday Zaheer Khan</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: radial-gradient(circle at top, #f780b7, #0a0a0a);
+            font-family: 'Segoe UI', sans-serif;
+            text-align: center;
+            color: white;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        h1 {
+            font-size: 3.5em;
+            margin-top: 60px;
+            animation: glow 2s infinite alternate;
+        }
+
+        h2 {
+            font-size: 2em;
+            margin-top: 10px;
+            color: #fff8dc;
+        }
+
+        p {
+            font-size: 1.3em;
+            width: 75%;
+            margin: auto;
+            margin-top: 25px;
+            line-height: 1.7;
+        }
+
+        button {
+            margin-top: 45px;
+            padding: 16px 35px;
+            font-size: 18px;
+            border: none;
+            border-radius: 40px;
+            background: white;
+            color: #ff3f6c;
+            cursor: pointer;
+            transition: 0.4s;
+            box-shadow: 0 0 15px rgba(255,255,255,0.5);
+        }
+
+        button:hover {
+            background: #ff3f6c;
+            color: white;
+            transform: scale(1.05);
+        }
+
+        @keyframes glow {
+            from { text-shadow: 0 0 10px #fff; }
+            to { text-shadow: 0 0 30px #ffe066; }
+        }
+
+        .heart {
+            position: absolute;
+            color: #ff0033;
+            animation: float 6s linear infinite;
+            pointer-events: none;
+        }
+
+        @keyframes float {
+            0% { bottom: -50px; opacity: 1; }
+            100% { bottom: 110%; opacity: 0; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Happy Birthday ❤️</h1>
+    <h2>Zaheer Khan</h2>
+
+    <p>
+         "Happy Birthday Zaheer! 🎉🥳💖 Today is all about you, full of smiles 😄, and fun 🎈.
+         You are the most special part of my life ❤️✨ 
+         Every day your smile gives me energy ☀️💫
+          May Allah always keep you happy 🌸🌟 and may your life be full of love 💕, success 🏆, and surprises 🎁. 
+          You are my favorite person 😍💖 I love teasing you 😏 and it feels so good when you agree 😄💖 Today and always, may your life be magical and sparkling ✨✨ Enjoy your day, dance 💃, and shine the world with your amazing vibes 😎🌈💖"
+        Today is very special because the most beautiful soul came into this world.
+        You are my happiness, my peace, and my forever.
+        May Allah bless you with a long life, success, and endless smiles.
+    </p>
+
+    <a href="gallery.html">
+        <button>Open My Heart 💝</button>
+    </a>
+
+    <script>
+        // Zyada hearts (fast interval)
+        setInterval(() => {
+            for (let i = 0; i < 3; i++) { // ek dafa main 3 hearts
+                const heart = document.createElement("div");
+                heart.classList.add("heart");
+                heart.innerHTML = "❤️";
+
+                heart.style.left = Math.random() * 100 + "vw";
+                heart.style.fontSize = Math.random() * 25 + 20 + "px";
+
+                document.body.appendChild(heart);
+
+                setTimeout(() => {
+                    heart.remove();
+                }, 6000);
+            }
+        }, 120); // speed (kam = zyada hearts)
+    </script>
+
+</body>
+</html>
